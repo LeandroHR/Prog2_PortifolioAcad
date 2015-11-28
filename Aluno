@@ -1,0 +1,33 @@
+public class Aluno extends Perfil 
+{
+
+	private String cursoAluno;
+	private String situacaoAluno;
+	
+	public Aluno(String nome, String user, String cursoAluno, String situacaoAluno )
+	{
+		super(nome, user);
+		this.cursoAluno = cursoAluno;
+		this.situacaoAluno = situacaoAluno;
+	}
+
+	public String getCursoAluno() 
+	{
+		return cursoAluno;
+	}
+
+	public void setCursoAluno(String cursoAluno) 
+	{
+		this.cursoAluno = cursoAluno;
+	}
+
+	public String getSituacaoAluno() 
+	{
+		return situacaoAluno;
+	}
+
+	public void setSituacaoAluno(String situacaoAluno) 
+	{
+		this.situacaoAluno = situacaoAluno;
+	}
+}

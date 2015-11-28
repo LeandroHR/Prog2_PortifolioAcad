@@ -1,0 +1,24 @@
+
+public class Professor extends Perfil 
+{
+
+	private String areaAtuacao;
+	
+	public Professor(String nome, String user, String areaAtuacao)
+	{
+		super(nome, user);
+		this.areaAtuacao = areaAtuacao;
+	}
+
+	public String getAreaAtuacao() 
+	{
+		return areaAtuacao;
+	}
+
+	public void setAreaAtuacao(String areaAtuacao) 
+	{
+		this.areaAtuacao = areaAtuacao;
+	}
+	
+	
+}

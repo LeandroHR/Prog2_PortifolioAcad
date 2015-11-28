@@ -1,0 +1,126 @@
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class Janela extends JFrame
+{
+	private int pAberto = 0;
+	public Janela()
+	{
+		//int pAberto = 0;
+		
+		//Título da janela
+		setTitle("Gerenciador de Portifólio Academico");
+		//Tamanho da janela
+		setSize(800, 600);
+		//Layout
+		setLayout(null);
+		
+		//Paineis
+		//--Cadastrar Aluno
+		JPanel pCadAluno = new JPanel(null);
+		pCadAluno.setBounds(200, 0, 600, 600);
+		getContentPane().add(pCadAluno);
+		//pCadAluno.setBorder(LineBorder.createGrayLineBorder());
+		JLabel pTeste = new JLabel("teste do painel");
+		pTeste.setBounds(50, 50, 100, 100);
+		pCadAluno.add(pTeste);
+		pCadAluno.setVisible(false);
+		
+		//--Cadastrar Professor
+		JPanel pCadProf = new JPanel(null);
+		pCadProf.setBounds(200, 0, 600, 600);
+		getContentPane().add(pCadProf);
+		JLabel pTeste2 = new JLabel("Teste 2");
+		pTeste2.setBounds(50, 50, 100, 100);
+		pCadProf.add(pTeste2);
+		pCadProf.setVisible(false);
+		
+		//Menu
+		//--Panel do Menu
+		JPanel menu = new JPanel(null);
+		menu.setBounds(0, 0, 200, 600);
+		getContentPane().add(menu);
+		//menu.setBorder(LineBorder.createBlackLineBorder());
+		menu.setVisible(true);
+		
+		//--Label do Menu
+		JLabel lMenu = new JLabel("Menu");
+		lMenu.setBounds(83, 20, 50, 20);
+		menu.add(lMenu);
+		
+		//--Botões
+		JButton cadAluno = new JButton("Cadastrar Aluno");
+		cadAluno.setBounds(25, 60, 150, 35);
+		menu.add(cadAluno);
+		JButton cadProf = new JButton("Cadastrar Prof");
+		cadProf.setBounds(25, 100, 150, 35);
+		menu.add(cadProf);
+		JButton btTeste3 = new JButton("Botão de teste3");
+		btTeste3.setBounds(25, 140, 150, 35);
+		menu.add(btTeste3);
+		JButton btTeste4 = new JButton("Botão de teste4");
+		btTeste4.setBounds(25, 180, 150, 35);
+		menu.add(btTeste4);
+		JButton btTeste5 = new JButton("Botão de teste5");
+		btTeste5.setBounds(25, 220, 150, 35);
+		menu.add(btTeste5);
+		JButton btTeste6 = new JButton("Botão de teste6");
+		btTeste6.setBounds(25, 260, 150, 35);
+		menu.add(btTeste6);
+		JButton btTeste7 = new JButton("Botão de teste7");
+		btTeste7.setBounds(25, 300, 150, 35);
+		menu.add(btTeste7);
+		JButton btTeste8 = new JButton("Botão de teste8");
+		btTeste8.setBounds(25, 340, 150, 35);
+		menu.add(btTeste8);
+		JButton btTeste9 = new JButton("Botão de teste9");
+		btTeste9.setBounds(25, 380, 150, 35);
+		menu.add(btTeste9);
+		JButton btTeste10 = new JButton("Botão de teste10");
+		btTeste10.setBounds(25, 420, 150, 35);
+		menu.add(btTeste10);
+		
+		//--Listener dos Botões
+		//----Cadastrar Aluno
+		cadAluno.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pAberto = 0;
+				}
+				pCadAluno.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Cadastrar Professor
+		cadProf.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pAberto = 0;
+				}
+				pCadProf.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

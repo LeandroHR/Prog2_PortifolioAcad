@@ -13,8 +13,6 @@ public class Janela extends JFrame
 	private int pAberto = 0;
 	public Janela()
 	{
-		//int pAberto = 0;
-		
 		//Título da janela
 		setTitle("Gerenciador de Portifólio Academico");
 		//Tamanho da janela
@@ -42,6 +40,54 @@ public class Janela extends JFrame
 		pCadProf.add(pTeste2);
 		pCadProf.setVisible(false);
 		
+		//--Cadastrar Projeto ou Trabalho
+		JPanel pCadTrab = new JPanel(null);
+		pCadTrab.setBounds(200, 0, 600, 600);
+		getContentPane().add(pCadTrab);
+		pCadTrab.setVisible(false);
+		
+		//--Atualizar Cadastros
+		JPanel pAtualizarCad = new JPanel(null);
+		pAtualizarCad.setBounds(200, 0, 600, 600);
+		getContentPane().add(pAtualizarCad);
+		pAtualizarCad.setVisible(false);
+		
+		//--Remover Cadastros
+		JPanel pRemCad = new JPanel(null);
+		pRemCad.setBounds(200, 0, 600, 600);
+		getContentPane().add(pRemCad);
+		pRemCad.setVisible(false);
+		
+		//--Pesquisar por Perfil
+		JPanel pPesqPerf = new JPanel(null);
+		pPesqPerf.setBounds(200, 0, 600, 600);
+		getContentPane().add(pPesqPerf);
+		pPesqPerf.setVisible(false);
+		
+		//--Pesquisar Projeto ou Trabalho
+		JPanel pPesqTrab = new JPanel(null);
+		pPesqTrab.setBounds(200, 0, 600, 600);
+		getContentPane().add(pPesqTrab);
+		pPesqTrab.setVisible(false);
+		
+		//--Pesquisar Professor
+		JPanel pPesqProf = new JPanel(null);
+		pPesqProf.setBounds(200, 0, 600, 600);
+		getContentPane().add(pPesqProf);
+		pPesqProf.setVisible(false);
+		
+		//--Exibir Academico e seu Portifolio
+		JPanel pShowPortAcad = new JPanel(null);
+		pShowPortAcad.setBounds(200, 0, 600, 600);
+		getContentPane().add(pShowPortAcad);
+		pShowPortAcad.setVisible(false);
+		
+		//--Comentar e Curtir
+		JPanel pComCur = new JPanel(null);
+		pComCur.setBounds(200, 0, 600, 600);
+		getContentPane().add(pComCur);
+		pComCur.setVisible(false);
+		
 		//Menu
 		//--Panel do Menu
 		JPanel menu = new JPanel(null);
@@ -62,30 +108,30 @@ public class Janela extends JFrame
 		JButton cadProf = new JButton("Cadastrar Prof");
 		cadProf.setBounds(25, 100, 150, 35);
 		menu.add(cadProf);
-		JButton btTeste3 = new JButton("Botão de teste3");
-		btTeste3.setBounds(25, 140, 150, 35);
-		menu.add(btTeste3);
-		JButton btTeste4 = new JButton("Botão de teste4");
-		btTeste4.setBounds(25, 180, 150, 35);
-		menu.add(btTeste4);
-		JButton btTeste5 = new JButton("Botão de teste5");
-		btTeste5.setBounds(25, 220, 150, 35);
-		menu.add(btTeste5);
-		JButton btTeste6 = new JButton("Botão de teste6");
-		btTeste6.setBounds(25, 260, 150, 35);
-		menu.add(btTeste6);
-		JButton btTeste7 = new JButton("Botão de teste7");
-		btTeste7.setBounds(25, 300, 150, 35);
-		menu.add(btTeste7);
-		JButton btTeste8 = new JButton("Botão de teste8");
-		btTeste8.setBounds(25, 340, 150, 35);
-		menu.add(btTeste8);
-		JButton btTeste9 = new JButton("Botão de teste9");
-		btTeste9.setBounds(25, 380, 150, 35);
-		menu.add(btTeste9);
-		JButton btTeste10 = new JButton("Botão de teste10");
-		btTeste10.setBounds(25, 420, 150, 35);
-		menu.add(btTeste10);
+		JButton cadTrab = new JButton("Cad. Proj/Trab");
+		cadTrab.setBounds(25, 140, 150, 35);
+		menu.add(cadTrab);
+		JButton atualizarCad = new JButton("Atualizar Cadastros");
+		atualizarCad.setBounds(25, 180, 150, 35);
+		menu.add(atualizarCad);
+		JButton remCad = new JButton("Remover Cadastros");
+		remCad.setBounds(25, 220, 150, 35);
+		menu.add(remCad);
+		JButton pesqPerf = new JButton("Pesquisar Perfil");
+		pesqPerf.setBounds(25, 260, 150, 35);
+		menu.add(pesqPerf);
+		JButton pesqTrab = new JButton("Pesq. Proj/Trab");
+		pesqTrab.setBounds(25, 300, 150, 35);
+		menu.add(pesqTrab);
+		JButton pesqProf = new JButton("Pesquisar Prof");
+		pesqProf.setBounds(25, 340, 150, 35);
+		menu.add(pesqProf);
+		JButton showPortAcad = new JButton("Exibir Portifólio");
+		showPortAcad.setBounds(25, 380, 150, 35);
+		menu.add(showPortAcad);
+		JButton comCur = new JButton("Comentar e Curtir");
+		comCur.setBounds(25, 420, 150, 35);
+		menu.add(comCur);
 		
 		//--Listener dos Botões
 		//----Cadastrar Aluno
@@ -98,6 +144,14 @@ public class Janela extends JFrame
 				{
 					pCadAluno.setVisible(false);
 					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
 					pAberto = 0;
 				}
 				pCadAluno.setVisible(true);
@@ -114,12 +168,213 @@ public class Janela extends JFrame
 				{
 					pCadAluno.setVisible(false);
 					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
 					pAberto = 0;
 				}
 				pCadProf.setVisible(true);
 				pAberto = 1;
 			}
 		});
+		//----Cadastrar Trabalho ou Projeto
+		cadTrab.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pCadTrab.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Atualizar Cadastros
+		atualizarCad.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pAtualizarCad.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Remover Cadastros
+		remCad.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pRemCad.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Pesquisar por Perfil
+		pesqPerf.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pPesqPerf.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Pesquisar Projeto ou Trabalho
+		pesqTrab.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pPesqTrab.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Pesquisar Professor
+		pesqProf.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pPesqProf.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Exibir Academico e seu Portifólio
+		showPortAcad.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pShowPortAcad.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		//----Comentar e Curtir
+		comCur.addActionListener(new ActionListener() 
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				if(pAberto != 0)
+				{
+					pCadAluno.setVisible(false);
+					pCadProf.setVisible(false);
+					pCadTrab.setVisible(false);
+					pAtualizarCad.setVisible(false);
+					pRemCad.setVisible(false);
+					pPesqPerf.setVisible(false);
+					pPesqTrab.setVisible(false);
+					pPesqProf.setVisible(false);
+					pShowPortAcad.setVisible(false);
+					pComCur.setVisible(false);
+					pAberto = 0;
+				}
+				pComCur.setVisible(true);
+				pAberto = 1;
+			}
+		});
+		
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

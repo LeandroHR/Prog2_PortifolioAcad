@@ -1,0 +1,117 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Projeto {
+	
+	private String titulo;
+	private String resumo;
+	private String palavrasChave;
+	private String links;
+	private String disciplina;
+	private String tecnologias;
+	private String parceria;
+	private String inovacao;
+	private ArrayList<Aluno> alP = new ArrayList<Aluno>();//esse P significa PROJETO
+	private Professor prP;//esse P significa PROJETO
+
+	public Projeto(String titulo, String resumo, String palavrasChave, String links, String disciplina,String tecnologias, String parceria, String inovacao, Portifolio pp)
+	{
+		this.titulo = titulo;
+		this.resumo = resumo;
+		this.palavrasChave = palavrasChave;
+		this.links = links;
+		this.disciplina = disciplina;
+		this.tecnologias = tecnologias;
+		this.parceria = parceria;
+		this.inovacao = inovacao;
+	}
+	public Projeto()
+	{
+		
+	}
+	
+	public void CadastrarProjeto()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("DIGITE O TITULO DO PROJETO: ");
+		titulo = s.nextLine();
+		System.out.println("DIGITE O RESUMO DO PROJETO: ");
+		resumo = s.nextLine();
+		System.out.println("DIGITE AS PALAVRAS CHAVE DO PROJETO: ");
+		palavrasChave = s.nextLine();
+		System.out.println("DIGITE O LINK DO PROJETO: ");
+		links = s.nextLine();
+		System.out.println("DIGITE A DISCIPLINA DO PROJETO: ");
+		disciplina = s.nextLine();
+		System.out.println("DIGITE AS TECNOLOGIAS DO PROJETO: ");
+		tecnologias = s.nextLine();
+		System.out.println("DIGITE A PARCERIA DO PROJETO: ");
+		parceria = s.nextLine();
+		System.out.println("DIGITE A INOVACAO DO PROJETO: ");
+		inovacao = s.nextLine();
+	}
+	
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getResumo() {
+		return resumo;
+	}
+	public void setResumo(String resumo) {
+		this.resumo = resumo;
+	}
+	public String getPalavrasChave() {
+		return palavrasChave;
+	}
+	public void setPalavrasChave(String palavrasChave) {
+		this.palavrasChave = palavrasChave;
+	}
+	public String getLinks() {
+		return links;
+	}
+	public void setLinks(String links) {
+		this.links = links;
+	}
+	public String getDisciplina() {
+		return disciplina;
+	}
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+	public String getTecnologias() {
+		return tecnologias;
+	}
+	public void setTecnologias(String tecnologias) {
+		this.tecnologias = tecnologias;
+	}
+	public String getParceria() {
+		return parceria;
+	}
+	public void setParceria(String parceria) {
+		this.parceria = parceria;
+	}
+	public String getInovacao() {
+		return inovacao;
+	}
+	public void setInovacao(String inovacao) {
+		this.inovacao = inovacao;
+	}
+	public ArrayList<Aluno> getAlP() {
+		return alP;
+	}
+	public void addAlunos(Aluno alP) {
+		this.alP.add(alP);
+	}
+	public Professor getPrP() {
+		return prP;
+	}
+	public void setPrP(Professor prP) {
+		this.prP = prP;
+	}
+	
+	
+
+}

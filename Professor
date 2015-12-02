@@ -1,7 +1,7 @@
+import java.util.Scanner;
 
-public class Professor extends Perfil 
+public class Professor extends Perfil
 {
-
 	private String areaAtuacao;
 	
 	public Professor(String nome, String user, String areaAtuacao)
@@ -9,16 +9,42 @@ public class Professor extends Perfil
 		super(nome, user);
 		this.areaAtuacao = areaAtuacao;
 	}
-
-	public String getAreaAtuacao() 
+	public Professor()
+	{
+		
+	}
+	public void CadastrarProfessor()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("DIGITE O NOME DO PROFESSOR: ");
+		nome = s.nextLine();
+		System.out.println("DIGITE O USER DO PROFESSOR: ");
+		user = s.nextLine();
+		System.out.println("DIGITE A AREA DE ATUACAO DO PROFESSOR: ");
+		areaAtuacao = s.nextLine();
+	}
+	
+	public void AlteraProfessor(int aux, Professor p)
+	{
+		Scanner s = new Scanner(System.in);
+		if(aux == 1){
+			System.out.println("DIGITE O NOVO NOME DO PROFESSOR: ");
+			p.setNome(s.nextLine());}
+		else if(aux == 2){
+			System.out.println("DIGITE O NOVO USER DO PROFESSOR: ");
+			user = s.nextLine();
+			p.setUser(s.nextLine());}
+		else if(aux == 3){
+			System.out.println("DIGITE O NOVO CURSO DO ALUNO: ");
+			p.setAreaAtuacao(s.nextLine());	}
+	}
+	public String getAreaAtuacao()
 	{
 		return areaAtuacao;
 	}
 
-	public void setAreaAtuacao(String areaAtuacao) 
+	public void setAreaAtuacao(String areaAtuacao)
 	{
 		this.areaAtuacao = areaAtuacao;
-	}
-	
-	
+	}	
 }

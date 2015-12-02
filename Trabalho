@@ -1,0 +1,110 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Trabalho {
+	
+	private String titulo;
+	private String resumo;
+	private String palavrasChave;
+	private String links;
+	private String disciplina;
+	private Portifolio pt;
+	private ArrayList<Aluno> alT = new ArrayList<Aluno>();//esse T significa trabalho
+	private Professor prT;//esse T significa trabalho
+	
+
+	public Trabalho(String titulo, String resumo, String palavrasChave, String links, String disciplina, Portifolio pt,Professor prT, ArrayList<Aluno> alT )
+	{
+		this.titulo = titulo;
+		this.resumo = resumo;
+		this.palavrasChave = palavrasChave;
+		this.links = links;
+		this.disciplina = disciplina;
+		this.pt = pt;
+		this.alT = alT;
+		this.prT = prT;
+	}
+	
+	public Trabalho()
+	{
+	}
+	public void CadastrarTrabalho()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("DIGITE O TITULO DO TRABALHO: ");
+		titulo = s.nextLine();
+		System.out.println("DIGITE O RESUMO DO TRABALHO: ");
+		resumo = s.nextLine();
+		System.out.println("DIGITE AS PALAVRAS CHAVES DO TRABALHO: ");
+		palavrasChave = s.nextLine();
+		System.out.println("DIGITE OS LINKS DO TRABALHO: ");
+		links = s.nextLine();
+		System.out.println("DIGITE A DISCIPLINA DO TRABALHO: ");
+		disciplina = s.nextLine();
+	}
+	
+	
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public void setResumo(String resumo) {
+		this.resumo = resumo;
+	}
+
+	public String getPalavrasChave() {
+		return palavrasChave;
+	}
+
+	public void setPalavrasChave(String palavrasChave) {
+		this.palavrasChave = palavrasChave;
+	}
+
+	public String getLinks() {
+		return links;
+	}
+
+	public void setLinks(String links) {
+		this.links = links;
+	}
+
+	public String getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	public Portifolio getPt() {
+		return pt;
+	}
+
+	public void setPt(Portifolio pt) {
+		this.pt = pt;
+	}
+
+	public ArrayList<Aluno> getAlT() {
+		return alT;
+	}
+
+	public void addAluno(Aluno alT) {
+		this.alT.add(alT);
+	}
+
+	public Professor getPrT() {
+		return prT;
+	}
+
+	public void setPrT(Professor prT) {
+		this.prT = prT;
+	}		
+}

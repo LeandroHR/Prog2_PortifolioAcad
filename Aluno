@@ -1,33 +1,64 @@
-public class Aluno extends Perfil 
-{
+import java.util.Scanner;
+
+public class Aluno extends Perfil {
 
 	private String cursoAluno;
 	private String situacaoAluno;
 	
-	public Aluno(String nome, String user, String cursoAluno, String situacaoAluno )
-	{
+	public Aluno(String nome, String user, String cursoAluno, String situacaoAluno ){
 		super(nome, user);
 		this.cursoAluno = cursoAluno;
 		this.situacaoAluno = situacaoAluno;
 	}
-
-	public String getCursoAluno() 
+	
+	public Aluno()
 	{
-		return cursoAluno;
+		
+	}
+	
+	public void CadastarAcademico()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("DIGITE O NOME DO ACADEMICO: ");
+		nome = s.nextLine();
+		System.out.println("DIGITE O USER DO ACADEMICO: ");
+		user = s.nextLine();
+		System.out.println("DIGITE O CURSO DO ALUNO: ");
+		cursoAluno = s.nextLine();
+		System.out.println("DIGITE A SITUAÇÃO DO ALUNO: ");
+		situacaoAluno = s.nextLine();
+	}
+	
+	public void AlteraAluno(int aux)
+	{
+		Scanner s = new Scanner(System.in);
+		if(aux == 1){
+			System.out.println("DIGITE O NOVO NOME DO ACADEMICO: ");
+			nome = s.nextLine();}
+		else if(aux == 2){
+			System.out.println("DIGITE O NOVO USER DO ACADEMICO: ");
+			user = s.nextLine();}
+		else if(aux == 3){
+			System.out.println("DIGITE O NOVO CURSO DO ALUNO: ");
+			cursoAluno = s.nextLine();}
+		else if(aux == 4){
+			System.out.println("DIGITE A NOVA SITUAÇÃO DO ALUNO: ");
+			situacaoAluno = s.nextLine();}							
 	}
 
-	public void setCursoAluno(String cursoAluno) 
-	{
+	public String getCursoAluno() {
+		return cursoAluno;
+	}
+	
+	public void setCursoAluno(String cursoAluno) {
 		this.cursoAluno = cursoAluno;
 	}
 
-	public String getSituacaoAluno() 
-	{
+	public String getSituacaoAluno() {
 		return situacaoAluno;
 	}
 
-	public void setSituacaoAluno(String situacaoAluno) 
-	{
+	public void setSituacaoAluno(String situacaoAluno) {
 		this.situacaoAluno = situacaoAluno;
 	}
 }

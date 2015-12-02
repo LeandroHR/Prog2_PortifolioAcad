@@ -1,69 +1,31 @@
-public class Portifolio 
-{
+import java.util.ArrayList;
+
+
+public class Portifolio {
+	private ArrayList <Trabalho> t = new ArrayList<Trabalho>();
+	private ArrayList <Projeto> p = new ArrayList <Projeto>();
 	
-	private String titulo;
-	private String resumo;
-	private String palavrasChave;
-	private String links;
-	private String disciplina;
-
-	public Portifolio(String titulo, String resumo, String palavrasChave, String links, String disciplina)
+	public Portifolio()
 	{
-		this.titulo = titulo;
-		this.resumo = resumo;
-		this.palavrasChave = palavrasChave;
-		this.links = links;
-		this.disciplina = disciplina;
-	}
-
-	public String getTitulo() 
-	{
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) 
-	{
-		this.titulo = titulo;
-	}
-
-	public String getResumo() 
-	{
-		return resumo;
-	}
-
-	public void setResumo(String resumo) 
-	{
-		this.resumo = resumo;
-	}
-
-	public String getPalavrasChave() 
-	{
-		return palavrasChave;
-	}
-
-	public void setPalavrasChave(String palavrasChave) 
-	{
-		this.palavrasChave = palavrasChave;
-	}
-
-	public String getLinks() 
-	{
-		return links;
-	}
-
-	public void setLinks(String links) 
-	{
-		this.links = links;
-	}
-
-	public String getDisciplina() 
-	{
-		return disciplina;
-	}
-
-	public void setDisciplina(String disciplina) 
-	{
-		this.disciplina = disciplina;
+		
 	}
 	
+	public Portifolio(ArrayList <Trabalho> t ,ArrayList <Projeto> p)
+	{
+		this.t = t;
+		this.p = p;
+	}
+	
+	public ArrayList<Trabalho> getT() {
+		return t;
+	}
+	public void addTrabalho(Trabalho t) {
+		this.t.add(t);
+	}
+	public ArrayList<Projeto> getP() {
+		return p;
+	}
+	public void addProjeto(Projeto p) {
+		this.p.add(p);
+	}
 }
